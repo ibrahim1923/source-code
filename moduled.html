@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="circle" stroke-linejoin="circle" stroke-width="2" class="w-10 h-10 text-red p-2 bg-blue-500 rounded-full" viewBox=" 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+            <span class="ml-3 text-xl">CODE CAMP</span>
+          </a>
+          <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+            <a class="mr-5 hover:text-gray-900">HOME</a>
+            <a href="index.html" class="mr-5 hover:text-gray-900">BACK</a>
+          </nav>
+          
+        </div>
+      </header>
+      <hr>
+
+      <div class="text-boxes">
+        <div class="text-box" HTMLBox>
+          <div class="topic">MODUELS:</div>
+          <textarea id="HTMLBox" readonly>
+            <!-- from platform import platform, python_revision -->
+            <!-- from urllib.request import URLopener -->
+            <!-- import pyttsx3 -->
+            <!-- import pywhatkit -->
+            <!-- import instaloader -->
+            <!-- import speech_recognition as sr -->
+            <!-- import datetime -->
+            <!-- import ctypes -->
+            <!-- import os -->
+            <!-- import winshell -->
+            <!-- import json -->
+            <!-- from urllib.request import urlopen -->
+            <!-- from requests import get -->
+            <!-- from geopy.distance import great_circle -->
+            <!-- from geopy.geocoders import Nominatim -->
+            <!-- import geocoder -->
+            <!-- import webbrowser as web -->
+            <!-- import json -->
+            <!-- import sys -->
+            <!-- import wikipedia -->
+            <!-- import random -->
+            <!-- import wolframalpha -->
+            <!-- import webbrowser -->
+            <!-- import pyautogui -->
+            <!-- import keyboard -->
+            <!-- import pyjokes -->
+            <!-- import operator -->
+            <!-- import requests -->
+            <!-- from googletrans import Translator -->
+            <!-- from bs4 import BeautifulSoup -->
+            <!-- import requests -->
+            <!-- import time -->
+            <!-- import smtplib -->
+            <!-- import turtle -->
+            <!-- import AMP -->
+            <!-- from playsound import playsound -->
+          </textarea>
+          <button id="HTMLButton">copy code</button>
+        </div>
+      </div>
+
+
+      <script>
+        let HTMLBox = document.getElementById("HTMLBox");
+        let HTMLButton = document.getElementById("HTMLButton");
+
+        HTMLButton.onclick = function() {
+          HTMLBox.select();
+          document.execCommand("copy");
+          HTMLButton.innerText = "code copied"
+        
+        }
+        
+        
+      </script>
+
+      
+  <div class="text-boxes">    
+        <div class="text-box CSSBox">
+          <div class="topic">text to speech engine:</div>
+          <textarea id="CSSBox" readonly>
+           
+              engine = pyttsx3.init('sapi5')
+              voices = engine.getProperty('voices')
+              print(voices)
+              engine.setProperty('voice', voices[5].id)
+              engine.setProperty('rate',180)
+
+          </textarea>
+          <button id="CSSButton">copy code</button>
+        </div>
+      </div>
+
+      <script>
+        
+        let CSSBox = document.getElementById("CSSBox");
+        let CSSButton = document.getElementById("CSSButton");
+
+        CSSButton.onclick = function() {
+          CSSBox.select();
+          document.execCommand("copy");
+          CSSButton.innerText = "codes copied"
+        }
+      </script>
+      
+      
+      <div class="text-boxes">
+        <div class="text-box" SPEAKBox>
+          <div class="topic">speak function:</div>
+          <textarea id="SPEAKBox" readonly>
+           
+            def speak(audio):
+            engine.say(audio)
+            print(audio)
+            engine.runAndWait()
+
+          </textarea>
+          <button id="SPEAKButton">copy code</button>
+        </div>
+      </div>
+
+      <script>
+        let SPEAKBox = document.getElementById("SPEAKBox");
+        let SPEAKButton = document.getElementById("SPEAKButton");
+
+        SPEAKButton.onclick = function() {
+          SPEAKBox.select();
+          document.execCommand("copy");
+          SPEAKButton.innerText = "codes copied"
+        }
+      </script>
+      
+      <div class="text-boxes">
+        <div class="text-box" WISHBox>
+          <div class="topic">wish command:</div>
+          <textarea id="WISHBox" readonly>
+            def wishMe():
+            hour = int(datetime.datetime.now().hour)
+            if hour>=0 and hour<12:
+                speak("Good Morning! Sir")
+        
+        
+            elif hour>=12 and hour<18:
+                speak("Good Afternoon! Sir")
+        
+            else:
+                speak("Good Evening Sir")
+          </textarea>
+          <button id="WISHButton">copy code</button>
+        </div>
+      </div>
+
+      <SCript>
+        let WISHBox = document.getElementById("WISHBox");
+        let WISHButton = document.getElementById("WISHButton");
+
+        WISHButton.onclick = function() {
+          WISHBox.select();
+          document.execCommand("copy");
+          WISHButton.innerText = "codes copied"
+        }
+      </SCript>
+
+      <div class="text-boxes">
+        <div class="text-box" TAKEBox>
+          <div class="topic">Take command:</div>
+          <textarea id="TAKEButton" readonly>
+            def takecommand():
+
+            r = sr.Recognizer()
+            with sr.Microphone() as source:
+                print("Listening....")
+                r.pause_threshold = 0.8
+                audio = r.listen(source)
+
+            try:
+                print("Recognizing....")
+                query = r.recognize_google(audio, language='en-in')
+                print(f"user said: {query}\n")
+
+            except Exception as e:
+                print("say that again sir")
+                return "None"
+            return query
+          </textarea>
+          <button id="TAKEButton">copy code</button>
+        </div>
+      </div>
+
+      <SCript>
+        let TAKEHBox = document.getElementById("TAKEBox");
+        let TAKEButton = document.getElementById("TAKEButton");
+
+        TAKEButton.onclick = function() {
+          TAKEBox.select();
+          document.execCommand("copy");
+          TAKEButton.innerText = "codes copied"
+        }
+      </SCript>
+
+      
+      <div class="text-boxes">
+        <div class="text-box" HTMLBox>
+          <div class="topic">to explore maps and locations:</div>
+          <textarea id="pyttsx3" readonly>
+            
+                def GoogleMaps(Place):
+
+                Url_Place = "https://www.google.com/maps/place/" + str(Place)
+
+                webbrowser.open(url=Url_Place)
+
+                geolocator = Nominatim(user_agent="myGeocoder")
+
+                location = geolocator.geocode(Place, addressdetails=True)
+
+                target_latlon = location.latitude, location.longitude
+
+                location = location.raw['address']
+
+                target = {'city': location.get('city', ''),
+                          'state': location.get('state', '')}
+
+                current_loca = geocoder.ip('m')
+
+                current_latlon = current_loca.latlng
+
+                distance = str(great_circle(current_latlon, target_latlon))
+                distance = str(distance.split(' ', 1)[0])
+                distance = round(float(distance), 2)
+
+
+                speak(target)
+                speak(f"Sir, {Place} is {distance} Kilometer away from you'r Location")
+          </textarea>
+          <button id="HTMLButton">copy code</button>
+        </div>
+      </div>
+
+       
+      <div class="text-boxes">
+        <div class="text-box" HTMLBox>
+          <div class="topic">Email function:</div>
+          <textarea id="pyttsx3" readonly>
+            def sendEmail(to, content):
+            server = smtplib.SMTP('smtp.gmail.com')
+            server.ehlo()
+            server.starttls()
+            server.login('----your email id-----', '----your  password-------')
+            server.sendmail('ibrahimsh1910@gmail.com', to, content)
+            server.close()
+    
+               
+          </textarea>
+          <button id="HTMLButton">copy code</button>
+        </div>
+      </div>
+      
+      <div class="text-boxes">
+        <div class="text-box" HTMLBox>
+          <div class="topic">wikipedia search:</div>
+          <textarea id="pyttsx3" readonly>
+            elif 'Wikipedia' in query:
+            speak("searching wikipedia sir...")
+            query = query.replace("wikipedia", "")
+            results = wikipedia.summary(query, sentences=2)
+            speak("according to wikipedia")
+            speak(results)
+            print(results)
+               
+          </textarea>
+          <button id="HTMLButton">copy code</button>
+        </div>
+      </div>
+
+      <div class="text-boxes">
+        <div class="text-box" HTMLBox>
+          <div class="topic">to explore your location:</div>
+          <textarea id="pyttsx3" readonly>
+           
+            elif 'where is' in query:
+            Place = query.replace("where is ","")
+            <!-- Place = Place.replace("","") -->
+            GoogleMaps(Place)
+                  
+          </textarea>
+          <button id="HTMLButton">copy code</button>
+        </div>
+      </div>
+      <div class="text-boxes">
+        <div class="text-box" HTMLBox>
+          <div class="topic">to search any website:</div>
+          <textarea id="pyttsx3" readonly>
+           
+            elif 'website' in query:
+            speak("ok sir, launching....")
+            query = query.replace("......","")
+            query = query.replace("website","")
+            query = query.replace(" ","")
+            web1 = query.replace("open","")
+            web2 = 'https://www.' + web1 + '.com'
+            webbrowser.open(web2)
+            speak("launched!")
+
+          </textarea>
+          <button id="HTMLButton">copy code</button>
+        </div>
+      </div>
+
+     
+      <div class="text-boxes">
+        <div class="text-box" HTMLBox>
+          <div class="topic">to explore information</div>
+          <textarea id="pyttsx3" readonly>
+           
+            elif 'who is' in query:
+            speak("Searching Your Command Sir")
+            query = query.replace("wikipedia","")
+            results = wikipedia.summary(query,1)
+            print(results)
+            speak(results)
+
+          </textarea>
+          <button id="HTMLButton">copy code</button>
+        </div>
+      </div>
+
+     
+      <div class="text-boxes">
+        <div class="text-box" HTMLBox>
+          <div class="topic">to explore temperature</div>
+          <textarea id="pyttsx3" readonly>
+            
+              elif 'temperature' in query or 'weather' in query:
+              res = app.query(query)
+              speak(next(res.results).text)
+
+          </textarea>
+          
+      
+      <hr>
+      
+
+      <div>
+        <footer class="text-gray-600 body-font">
+          <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+            <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 blue-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+              </svg>
+              <span class="ml-3 text-xl">CODE CAMP</span>
+            </a>
+            <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2022 CODE CAMP—
+              <a href="https://twitter.com/knyttneve" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank"></a>
+            </p>
+            <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+              <a class="text-gray-500">
+                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                </svg>
+              </a>
+              <a class="ml-3 text-gray-500">
+                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                </svg>
+              </a>
+              <a class="ml-3 text-gray-500">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                </svg>
+              </a>
+              <a class="ml-3 text-gray-500">
+                <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                  <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                </svg>
+              </a>
+            </span>
+          </div>
+        </footer>
+      
+      </div>
+    
+  
+</body>
+</html>
